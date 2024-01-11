@@ -1,0 +1,21 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: fireflink
+
+stages:
+- stage: RunJar
+  jobs:
+  - job: RunJarJob
+    steps:
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          java -jar testing.jar
