@@ -18,4 +18,5 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          java -jar testing.jar
+          Start-Process -FilePath C:\jdk-11.0.13\bin\java.exe -ArgumentList ("-jar","testing.jar") -NoNewWindow -Wait
+          
