@@ -18,5 +18,5 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          Start-Process -FilePath %JAVA_HOME%\bin\java.exe -ArgumentList ("-jar","testing.jar") -NoNewWindow -Wait
+          Start-Process -FilePath $env:JAVA_HOME\bin\java.exe -ArgumentList ("-jar","testing.jar") -NoNewWindow -Wait
           
